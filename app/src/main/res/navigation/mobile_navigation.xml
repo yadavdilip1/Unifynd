@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.assesment.unifynd.ui.home.view.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home"/>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.assesment.unifynd.ui.dashboard.view.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.assesment.unifynd.ui.numbers.NumbersFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <action
+        android:id="@+id/nav_home_to_nav_detail"
+        app:destination="@+id/navigation_detail"
+        />
+
+
+    <fragment
+        android:id="@+id/navigation_detail"
+        android:name="com.assesment.unifynd.ui.detail.DetailFragment"
+        android:label="@string/title_detail"
+        tools:layout="@layout/fragment_detail">
+
+        <argument
+            android:name="title"
+            app:argType="string"/>
+        <argument
+            android:name="body"
+            app:argType="string"/>
+
+    </fragment>
+
+
+
+</navigation>
